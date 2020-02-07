@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-    @section('content') {{--QUESTION: where is this coming from?--}}
+    @section('content')
     @guest
         <p> You dont have an account with us, would you like to sign up?</p>
         {{-- UI TO ADD:: show link to register form--}}
@@ -12,6 +12,11 @@
         @foreach ($tweets as $tweet)
             <p> {{$tweet->content}}</p>
             <p><strong>{{$tweet->author}}</strong></p>
+
+        @if(Auth::user()->id == $tweet->user_id){ {{--logged in user id should be equal to the tweets user_id--}}
+            <a href='/delete/{{$tweet->id}}'> Delete </a> {{--delete tweet with the id selected with the a-tag--}}
+                }
+        @endif
         @endforeach
 
 

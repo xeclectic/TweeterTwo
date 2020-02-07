@@ -23,3 +23,4 @@ Route::get('/profile', 'profileController@index');
 /* Tweet endpoints*/
 Route::get('/', 'tweetController@show');
 Route::post('/create', 'createTweetController@createTweet');
+Route::get('/delete/{id}', 'deleteTweetController@deleteTweet');
