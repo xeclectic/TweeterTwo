@@ -18,7 +18,8 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/profile', 'profileController@show');
+Route::get('/profile', 'profileController@index');
 
 /* Tweet endpoints*/
+Route::get('/', 'tweetController@show');
 Route::post('/create', 'createTweetController@createTweet');

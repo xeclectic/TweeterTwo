@@ -6,17 +6,24 @@
         {{-- UI TO ADD:: show link to register form--}}
 
     @else
-        <p>Welcome, {{Auth::user()->name}} </p>
+        <p>{{Auth::user()->name}}</p>
+        <a href="profile">Profile</a>
+
+        @foreach ($tweets as $tweet)
+            <p> {{$tweet->content}}</p>
+            <p><strong>{{$tweet->author}}</strong></p>
+        @endforeach
 
 
-        {{--Should I have made an "auhtor" column?--}}
     <form action="/create" method="post">
         @csrf
-        <input type="text" name="user_id" value="user_id">
+        <input type="hidden" name="name" value={{Auth::user()->name}}>
         <br>
-        <input type="text" name="content" value="tweet">
+        <input type="hidden" name="id" value={{Auth::user()->id}}>
         <br>
-        <input type="submit" name="add post" value="create tweet">
+        <input type="text" name="content" value="Body Text">
+        <br>
+        <input type="submit" name="add post" value="Publish">
     </form>
 
     @endguest
