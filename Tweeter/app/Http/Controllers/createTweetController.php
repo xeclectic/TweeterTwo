@@ -16,11 +16,7 @@ class createTweetController extends Controller
 
             $tweet->save();
 
-            $result = \App\Tweet::all();
-
-            return view('newsfeed', ['tweets' => $result]);
-        }else{
-            return view('newsfeed');
+            return redirect('/');
         }
     }
 }
