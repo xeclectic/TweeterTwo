@@ -15,7 +15,9 @@
 
         @if(Auth::user()->id == $tweet->user_id){ {{--logged in user id should be equal to the tweets user_id--}}
             <a href='/delete/{{$tweet->id}}'> Delete </a> {{--delete tweet with the id selected with the a-tag--}}
-                }
+                <br>
+            <a href='/editTweet/{{$tweet->id}}'>Edit</a>
+            }
         @endif
         @endforeach
 

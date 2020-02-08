@@ -12,13 +12,8 @@ class deleteTweetController extends Controller
         $tweet = \App\Tweet::find($id);
         $tweet -> delete();
 
-        $result = \App\Tweet::all();
+        return redirect('/');
 
-        return view('newsfeed', ['tweets' => $result]);
-
-        }else{
-            return view('newsfeed');
         }
-
     }
 }
