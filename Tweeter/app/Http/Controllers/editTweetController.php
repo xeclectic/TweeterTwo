@@ -9,9 +9,9 @@ class editTweetController extends Controller{
     public function editTweet($id){
         if(Auth::check()){
             $tweet = \App\Tweet::find($id);
-            $tweet ->id;
+            //$tweet ->id;
 
-            return redirect('edit');
+            return view('edit', ['tweets' => $tweet]);
         }
     }
 }

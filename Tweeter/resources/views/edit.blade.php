@@ -2,9 +2,8 @@
 
 @section('content')
 
-@php
-
-@endphp
+    <p>{{$tweets->content}}</p>
+    <p><strong>{{$tweets->author}}</strong></p>
 
         <form action="/editTweet" method="post">
             @csrf
