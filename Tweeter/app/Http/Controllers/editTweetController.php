@@ -6,12 +6,25 @@ use Illuminate\Http\Request;
 use Auth;
 
 class editTweetController extends Controller{
-    public function editTweet($id){
+    public function editTweet(Request $request, $id){
         if(Auth::check()){
             $tweet = \App\Tweet::find($id);
             //$tweet ->id;
 
             return view('edit', ['tweets' => $tweet]);
+        }
+    }
+    public function updateTweet(Request $request, $id){
+        if(Auth::check()){
+            error_log($id);
+            error_log($request->name);
+            $tweet=\App\Tweet::find($id);
+            $tweet->author = $request->name;
+            $tweet->content = $request->content;
+
+            $tweet->save();
+
+            return redirect('/');
         }
     }
 }

@@ -25,6 +25,5 @@ Route::get('/', 'tweetController@show');
 Route::post('/create', 'createTweetController@createTweet');
 Route::get('/delete/{id}', 'deleteTweetController@deleteTweet');
 Route::get('/editTweet/{id}', 'editTweetController@editTweet');
-
-/* view endpoints */
-Route::view('/edit', 'edit');
+Route::post('/updateTweet/{id}', 'editTweetController@updateTweet');
+Route::get('/showUsers', 'showUsersController@showUsers');

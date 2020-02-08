@@ -8,6 +8,7 @@
     @else
         <p>{{Auth::user()->name}}</p>
         <a href="profile">Profile</a>
+        <a href="showUsers"> Users</a>
 
         @foreach ($tweets as $tweet)
             <p> {{$tweet->content}}</p>

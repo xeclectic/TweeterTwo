@@ -5,7 +5,7 @@
     <p>{{$tweets->content}}</p>
     <p><strong>{{$tweets->author}}</strong></p>
 
-        <form action="/editTweet" method="post">
+        <form action="/updateTweet/{{$tweets->id}}" method="post">
             @csrf
             <input type="hidden" name="name" value={{Auth::user()->name}}>
             <br>
