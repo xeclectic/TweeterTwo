@@ -16,8 +16,6 @@ class editTweetController extends Controller{
     }
     public function updateTweet(Request $request, $id){
         if(Auth::check()){
-            error_log($id);
-            error_log($request->name);
             $tweet=\App\Tweet::find($id);
             $tweet->author = $request->name;
             $tweet->content = $request->content;

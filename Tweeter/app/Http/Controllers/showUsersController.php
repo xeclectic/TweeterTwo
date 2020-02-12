@@ -7,13 +7,14 @@ use Auth;
 
 class showUsersController extends Controller
 {   public function showUsers(){
-    if(Auth::check()){
-        $users = \App\User::all();
-        $follows = \App\Follow::where('following', Auth::user()->id)->get();
+        if(Auth::check()){
+            $users = \App\User::all();
+            $follows = \App\Follow::where('followed', Auth::user()->id->get());
 
-        return view('listUsers', ['users' => $users, 'follows' => $follows]);
-    }else{
-        return redirect('/');
-    }
+            return View('listUsers', ['users' => $users, 'follows' => $follows]);
+        }else{
+            return redirect('/');
+        }
     }
 }
+

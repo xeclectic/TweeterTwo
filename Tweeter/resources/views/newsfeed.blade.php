@@ -13,12 +13,13 @@
         @foreach ($tweets as $tweet)
             <p> {{$tweet->content}}</p>
             <p><strong>{{$tweet->author}}</strong></p>
+            <a href='/viewTweet/{{$tweet->id}}'> View</a>
 
-        @if(Auth::user()->id == $tweet->user_id){ {{--logged in user id should be equal to the tweets user_id--}}
+        @if(Auth::user()->id == $tweet->user_id) {{--logged in user id should be equal to the tweets user_id--}}
             <a href='/delete/{{$tweet->id}}'> Delete </a> {{--delete tweet with the id selected with the a-tag--}}
-                <br>
+            <br>
             <a href='/editTweet/{{$tweet->id}}'>Edit</a>
-            }
+
         @endif
         @endforeach
 

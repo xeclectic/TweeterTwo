@@ -27,3 +27,8 @@ Route::get('/delete/{id}', 'deleteTweetController@deleteTweet');
 Route::get('/editTweet/{id}', 'editTweetController@editTweet');
 Route::post('/updateTweet/{id}', 'editTweetController@updateTweet');
 Route::get('/showUsers', 'showUsersController@showUsers');
+Route::get('/viewTweet/{id}', 'tweetController@viewTweet');
+
+/*Commenting endpoints*/
+Route::post('/comment', 'createCommentController@createComment');
+Route::get('/deleteComment/{id}', 'deleteCommentController@deleteComment');

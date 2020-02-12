@@ -6,8 +6,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class Comment extends Model
 {
-    protected $table = "Comment";
+    protected $table = "comments";
     public $timestamp = false;
+
+    function user(){
+        return $this->belongTo('App\User');
+    }
 
     function tweet(){
         return $this -> belongTo('App\Tweet');
