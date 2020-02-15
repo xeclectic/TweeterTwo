@@ -22,12 +22,9 @@
    @foreach($comments as $comment)
    <p>{{$comment->content}}</p>
  <p><strong>{{Auth::user()->name}}</strong></p>
- @if(Auth::user()->id == $comment->user_id) {{--logged in user id should be equal to the tweets user_id--}}
+ @if(Auth::user()->id == $comment->user_id)
             <a href='/deleteComment/{{$comment->id}}'> Delete </a>
+            <a href='/editComment/{{$comment->id}}'> Edit </a>
     @endif
     @endforeach
-
-        {{-- <p>{{$comment = $tweets->comment}}</p>
-<p><strong>{{Auth::user()->name}}</strong></p> --}}
-
 @endsection

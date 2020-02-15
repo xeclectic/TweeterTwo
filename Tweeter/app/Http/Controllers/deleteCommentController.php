@@ -12,7 +12,8 @@ class deleteCommentController extends Controller
         $comment = \App\Comment::find($id);
         $comment -> delete();
 
-        return redirect('viewTweet/'.$request->tweet_id);
+        return redirect('/'); //lets maybe think up a different route??
+                              //make a button instead of an 'A'-tag??
 
         }
     }

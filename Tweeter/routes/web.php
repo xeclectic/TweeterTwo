@@ -29,6 +29,11 @@ Route::post('/updateTweet/{id}', 'editTweetController@updateTweet');
 Route::get('/showUsers', 'showUsersController@showUsers');
 Route::get('/viewTweet/{id}', 'tweetController@viewTweet');
 
-/*Commenting endpoints*/
+/*Comment endpoints */
 Route::post('/comment', 'createCommentController@createComment');
 Route::get('/deleteComment/{id}', 'deleteCommentController@deleteComment');
+Route::get('/editComment/{id}', 'editCommentController@editComment');
+Route::post('/updateComment/{id}', 'editCommentController@updateComment');
+
+/*Follow endpoints */
+Route::post('/followUsers', 'showUsersController@followUser');
