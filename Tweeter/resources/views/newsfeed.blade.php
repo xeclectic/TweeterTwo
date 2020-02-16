@@ -14,11 +14,19 @@
             <p> {{$tweet->content}}</p>
             <p><strong>{{$tweet->author}}</strong></p>
             <a href='/viewTweet/{{$tweet->id}}'> View</a>
+            <form action="/likePost/{{$tweet->id}}" method='post'>
+                @csrf
+                <input type="hidden" name="id" value={{Auth::user()->id}}>
+                <br>
+                <input type="hidden" name="tweet_id" value={{$tweet->id}}>
+                <br>
+                <input type="submit" name="like" value="Like">
 
         @if(Auth::user()->id == $tweet->user_id) {{--logged in user id should be equal to the tweets user_id--}}
             <a href='/delete/{{$tweet->id}}'> Delete </a> {{--delete tweet with the id selected with the a-tag--}}
             <br>
             <a href='/editTweet/{{$tweet->id}}'>Edit</a>
+            <br>
 
         @endif
         @endforeach
@@ -32,7 +40,7 @@
         <br>
         <input type="text" name="content" value="Body Text">
         <br>
-        <input type="submit" name="add post" value="Publish">
+        <input type="submit" name="addPost" value="Publish">
     </form>
 
     @endguest

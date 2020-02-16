@@ -39,4 +39,4 @@ Route::post('/updateComment/{id}', 'editCommentController@updateComment');
 Route::post('/followUsers', 'showUsersController@followUser');
 
 /* Like endpoints */
-Route::post('/likePost', 'likeController@likePost');
+Route::post('/likePost/{id}', 'likeController@likePost');

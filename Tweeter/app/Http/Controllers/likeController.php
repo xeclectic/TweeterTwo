@@ -3,17 +3,17 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Auth;
 
 class likeController extends Controller
 {
-    public function likePost(Request $request){
+    public function likePost(Request $request, $id){
         if(Auth::check()){
-            $likes = new \App\Follow;
-            $likes->user_id = $request->id;
-            $likes->tweet_id = $request->id;
-            $likes->followed = $request->name;
+            $like = new \App\Like;
+            $like->user_id = $request->id;
+            $like->tweet_id = $request->tweet_id;
 
-            $likes->save();
+            $like->save();
 
             return redirect('/');
         }
