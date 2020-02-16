@@ -20,6 +20,7 @@
                 <form action="/followUsers" method="post">
                     @csrf
                     <input type="hidden" name="id" value={{Auth::user()->id}}>
+                    <input type="hidden" name="userId" value={{$user->id}}>
                     <input type="hidden" name="followed" value={{$user->name}}>
                     <input type="submit" value="Follow">
                 </form>

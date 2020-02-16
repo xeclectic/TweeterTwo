@@ -21,7 +21,8 @@ class showUsersController extends Controller
         if(Auth::check()){
             $follow = new \App\Follow;
             $follow->user_id = $request->id;
-            $follow->followed = $request->name;
+            $follow->followed = $request->userId;
+            //$follow->followed = $request->name;
 
             $follow->save();
 
