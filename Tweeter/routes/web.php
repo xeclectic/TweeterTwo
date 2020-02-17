@@ -17,7 +17,7 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'HomeController@index')->name('newsfeed');
 Route::get('/profile', 'profileController@index');
 
 /* Tweet endpoints */
@@ -37,6 +37,11 @@ Route::post('/updateComment/{id}', 'editCommentController@updateComment');
 
 /* Follow endpoints */
 Route::post('/followUsers', 'showUsersController@followUser');
+Route::post('/unfollow/{id}', 'showUsersController@unfollowUser');
 
 /* Like endpoints */
 Route::post('/likePost/{id}', 'likeController@likePost');
+
+/* Profile endpoints */
+Route::get('/editProfile', 'editProfileController@show');
+Route::post('/updateBio/{id}', 'editProfileController@update');

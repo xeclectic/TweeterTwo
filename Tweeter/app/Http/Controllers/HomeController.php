@@ -23,6 +23,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('newsfeed');
+        $tweets=\App\Tweet::all();
+        return view('newsfeed', ['tweets' => $tweets]);
     }
 }

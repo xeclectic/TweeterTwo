@@ -29,4 +29,14 @@ class showUsersController extends Controller
             return redirect('/');
         }
     }
-}
+
+    public function unfollowUser($id){
+        if(Auth::check()){
+            $tweet = \App\Tweet::find($id);
+            $tweet -> delete();
+
+            return redirect('/');
+
+            }
+        }
+    }
