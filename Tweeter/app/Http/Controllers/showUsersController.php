@@ -9,7 +9,7 @@ class showUsersController extends Controller
 {   public function showUsers(){
         if(Auth::check()){
             $users = \App\User::all();
-            $follows = \App\Follow::where('followed', Auth::user()->id);
+            $follows = Auth::user()->follow;
 
             return View('listUsers', ['users' => $users, 'follows' => $follows]);
         }else{
@@ -22,20 +22,20 @@ class showUsersController extends Controller
             $follow = new \App\Follow;
             $follow->user_id = $request->id;
             $follow->followed = $request->userId;
-            //$follow->followed = $request->name;
 
             $follow->save();
 
-            return redirect('/');
+            return redirect('/showUsers');
         }
     }
 
-    public function unfollowUser($id){
+    public function unfollowUser(Request $request){
         if(Auth::check()){
-            $tweet = \App\Tweet::find($id);
-            $tweet -> delete();
+            $follow = \App\Follow::where("user_id", Auth::user()->id)->where("followed", $request->id)->get();
 
-            return redirect('/');
+            $follow [0] -> delete();
+
+            return redirect('/showUsers');
 
             }
         }

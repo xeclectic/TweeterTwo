@@ -9,7 +9,7 @@ class editProfileController extends Controller
 {
     public function show(){
         if(Auth::check()){
-            $profile = new \App\Profile;
+            $profile=Auth::user()->profile;
             return view('profileEdit', ['profile' => $profile]);
         }
 
@@ -17,15 +17,16 @@ class editProfileController extends Controller
 
     //edit bio//
 
-    public function update(Request $request){
+    public function update(Request $request) {
         if(Auth::check()){
-            $profile=\App\Profile::all();
-            $profile->user_id = $request->name;
-            $profile->biography = $request->biography;
+            $profile = new \App\Profile;
+            $profile->name = $request->name;
+            $profile->user_id = $request->id;
+            $profile->biography = $request->bio;
 
             $profile->save();
 
-            return redirect('profile');
+            return redirect('/');
         }
     }
 }

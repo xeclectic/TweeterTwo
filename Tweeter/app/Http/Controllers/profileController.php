@@ -6,8 +6,9 @@ use Illuminate\Http\Request;
 
 class profileController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        return view('profile');
+        $tweets=\App\Tweet::all();
+        return view('profile', ['tweets' => $tweets]);
     }
 }

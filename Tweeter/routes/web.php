@@ -37,11 +37,11 @@ Route::post('/updateComment/{id}', 'editCommentController@updateComment');
 
 /* Follow endpoints */
 Route::post('/followUsers', 'showUsersController@followUser');
-Route::post('/unfollow/{id}', 'showUsersController@unfollowUser');
+Route::post('/unfollow', 'showUsersController@unfollowUser');
 
 /* Like endpoints */
 Route::post('/likePost/{id}', 'likeController@likePost');
 
 /* Profile endpoints */
 Route::get('/editProfile', 'editProfileController@show');
-Route::post('/updateBio/{id}', 'editProfileController@update');
+Route::post('/updateBio', 'editProfileController@update');

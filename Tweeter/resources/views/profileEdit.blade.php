@@ -2,8 +2,8 @@
 
 @section('content')
 
-<p>{{$profile->biography}}</p>
-<p><strong>{{$profile->name}}</strong></p>
+@if(Auth::user()->id == $profile->user_id)
+    <p>{{$profile->biography}}</p>
 
 {{--eventually this will get the bio to show--}}
 
@@ -13,8 +13,9 @@
         <br>
         <input type="hidden" name="id" value={{Auth::user()->id}}>
         <br>
-        <input type="text" name="biography" value="">
+        <input type="text" name="bio" value="biography">
         <br>
         <input type="submit" name="addPost" value="Update">
     </form>
+    @endif
 @endsection
