@@ -29,7 +29,7 @@
                     @csrf
                     <input type="hidden" name="id" value={{Auth::user()->id}}>
                     <input type="hidden" name="userId" value={{$user->id}}>
-                    <input type="submit" value="Follow">
+                    <input type="submit" class="btn btn-info" value="Follow">
                 </form>
                 <br>
         @endif

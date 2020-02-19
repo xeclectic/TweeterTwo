@@ -3,12 +3,16 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Auth;
 
 class profileController extends Controller
 {
     public function index(Request $request)
     {
         $tweets=\App\Tweet::all();
-        return view('profile', ['tweets' => $tweets]);
+        if(Auth::check()){
+            $profile=Auth::user()->profile;
+            return view('profile', ['tweets' => $tweets, 'profile' => $profile]);
+        }
     }
 }
