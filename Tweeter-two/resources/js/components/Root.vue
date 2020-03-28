@@ -1,23 +1,22 @@
 <template>
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-                <div class="card">
-                    <div class="card-header">Example Component</div>
-
-                    <div class="card-body">
-                        I'm an example component.
-                    </div>
-                </div>
-            </div>
-        </div>
+    <div>
+        <Header />
+        <mainContent />
+        <Footer />
     </div>
 </template>
 
 <script>
+import Header from "./Header.vue";
+import mainContent from "./mainContent.vue";
+import Footer from "./Footer.vue";
+
     export default {
-        mounted() {
-            console.log('Component mounted.')
+        name: 'Root',
+        components: {
+            Header,
+            mainContent,
+            Footer
         }
     }
 </script>
