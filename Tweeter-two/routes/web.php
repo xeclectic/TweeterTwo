@@ -21,7 +21,7 @@ Route::get('/home', 'HomeController@index')->name('newsfeed');
 Route::get('/profile', 'profileController@index');
 
 /* Tweet endpoints */
-Route::get('/', 'tweetController@show');
+Route::get('/tweetPage', 'tweetController@show');
 Route::post('/create', 'createTweetController@createTweet');
 Route::get('/delete/{id}', 'deleteTweetController@deleteTweet');
 Route::get('/editTweet/{id}', 'editTweetController@editTweet');
