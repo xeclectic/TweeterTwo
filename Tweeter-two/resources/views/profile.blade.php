@@ -2,9 +2,10 @@
 
 @section('content')
 @guest
-      <div>
-          <p> You dont have an account with us, would you like to sign up?</p>
-      </div>
+    <div id="app">
+        <Root />
+    </div>
+    <script src="{{ asset('js/app.js') }}"></script>
 
   @else
       <div class="jumbotron p-3 mb-2 bg-info text-white">
