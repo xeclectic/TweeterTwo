@@ -21,18 +21,11 @@
                 <div class="z-depth-1" id="heading-divider-right"></div>
                 <div class="z-depth-1" id="heading-divider-left"></div>
     </div>
-    <div id="head-bg-img">
-        <img class="responsive-img" src="https://fei-fan-production.s3.amazonaws.com/s3fs-public/FEI-Reining-Givrins-Review-22-CROPPED.jpg">
-    </div>
 </div>
 </template>
 
 <script>
 export default {
-    methods: {
-
-    }
-
 }
 </script>
 
