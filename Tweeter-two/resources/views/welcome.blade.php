@@ -3,21 +3,20 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
         <title>Tweeter</title>
-
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-
+            {{-- Linked Libraries/Frameworks--}}
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <body>
         <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
                     @else
-                        <a href="{{ route('login') }}">Login</a>
+                    {{-- need to get login and register on a seperate page but for now they can sit here--}}
+                        {{-- <a href="{{ route('login') }}">Login</a> --}}
 
                         @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
+                            {{-- <a href="{{ route('register') }}">Register</a> --}}
                         @endif
                     @endauth
                 </div>
@@ -25,9 +24,15 @@
             <div id="app">
                 <Root />
             </div>
-            <script src="{{ asset('js/app.js') }}"></script>
-
-            </div>
         </div>
+        </div>
+
+    <script src="{{ asset('js/app.js') }}"></script>
+
+        {{-- Library Script --}}
+
+        {{-- Materialize --}}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
     </body>
 </html>
