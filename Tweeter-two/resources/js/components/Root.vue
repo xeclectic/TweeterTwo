@@ -1,8 +1,8 @@
 <template>
     <div>
-        <Header />
+        <Header id="header" />
         <parallax :speed-factor="1.3">
-            <img class="head-bg-img" width="100%" height="100%" src="https://fei-fan-production.s3.amazonaws.com/s3fs-public/FEI-Reining-Givrins-Review-22-CROPPED.jpg" alt="image">
+            <img class="head-bg-img" width="100%" height="50%" src="https://thisisrange.com/wp-content/uploads/2019/03/RM10-blog-posts2.jpg" alt="image">
         </parallax>
         <mainContent />
         <Footer />
@@ -25,3 +25,9 @@ import Parallax from "vue-parallaxy";
         }
     }
 </script>
+
+<style scoped>
+#header{
+    background:darkgray;
+}
+</style>

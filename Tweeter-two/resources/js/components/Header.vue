@@ -1,5 +1,5 @@
 <template>
-<div class="container">
+<div>
     <div class="row">
         <div class="col s2 m2 l2 left-align">
             <!-- link to content container -->
@@ -30,7 +30,6 @@ export default {
 </script>
 
 <style scoped>
-
 .row{
     padding: 0px;
     margin-top: 40px;

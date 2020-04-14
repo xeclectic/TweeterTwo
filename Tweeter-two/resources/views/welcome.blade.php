@@ -30,6 +30,9 @@
     <script src="{{ asset('js/app.js') }}"></script>
 
         {{-- Library Script --}}
+        {{-- scrollMagic --}}
+        <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></scrip
 
         {{-- Materialize --}}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
