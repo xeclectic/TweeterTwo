@@ -1,8 +1,8 @@
 <template>
     <div>
         <Header id="header" />
-        <parallax :speed-factor="1.3">
-            <img class="head-bg-img" width="100%" height="50%" src="https://thisisrange.com/wp-content/uploads/2019/03/RM10-blog-posts2.jpg" alt="image">
+        <parallax class="head-bg-img" :speed-factor="1.3">
+            <img width="100%" height="50%" src="https://i.imgur.com/cl8DavV.jpg" alt="backpacking">
         </parallax>
         <mainContent />
         <Footer />
@@ -26,8 +26,13 @@ import Parallax from "vue-parallaxy";
     }
 </script>
 
+
 <style scoped>
+.head-bg-img{
+    position: relative;
+    margin-bottom: 100px;
+}
 #header{
-    background:darkgray;
+    position: relative;
 }
 </style>
