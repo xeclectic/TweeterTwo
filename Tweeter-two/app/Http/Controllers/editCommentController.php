@@ -21,7 +21,7 @@ class editCommentController extends Controller
 
             $comment->save();
 
-            return redirect('/');
+            return redirect('/home');
         }
     }
 }

@@ -1928,6 +1928,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({});
 
 /***/ }),
@@ -2036,6 +2038,8 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue_parallaxy__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue-parallaxy */ "./node_modules/vue-parallaxy/dist/vue-parallaxy.min.js");
 /* harmony import */ var vue_parallaxy__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue_parallaxy__WEBPACK_IMPORTED_MODULE_0__);
+//
+//
 //
 //
 //
@@ -6700,7 +6704,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n*[data-v-61a7c374]{\n    margin: 0;\n    padding: 0;\n}\n#footer-img[data-v-61a7c374]{\n    position: absolute;\n    top: 630vh;\n    width: 100%;\n    height: 1000px;\n}\n#association-text[data-v-61a7c374]{\n     position: relative;\n  background: white;\n  text-align: center;\n  font-size: 50px;\n  bottom: 50vh;\n  opacity: 0.5;\n}\n#association-bg[data-v-61a7c374]{\n    position: relative;\n    background: #2b2d2f;\n    height: 500px;\n    bottom: 90vh;\n}\n#association-bg2[data-v-61a7c374]{\n    position: relative;\n    background: #50c878;\n    height: 350px;\n    bottom: 100vh;\n    -webkit-transform-origin: bottom left;\n            transform-origin: bottom left;\n   -webkit-transform: skewY(3deg);\n           transform: skewY(3deg);\n}\n#top-divider[data-v-61a7c374]{\n    position: relative;\n    background: #50c878;\n    height: 150px;\n    bottom: 200vh;\n}\n#hikers[data-v-61a7c374]{\n    position: absolute;\n    top: 440vh;\n    height: 1000px;\n}\n#trail-pct[data-v-61a7c374]{\n    position: absolute;\n    width: 350px;\n    height: 250px;\n     top: 565vh;\n     left: 50px;\n}\n#trail-cdt[data-v-61a7c374]{\n    position: absolute;\n    width: 350px;\n    height: 250px;\n     top: 565vh;\n     left: 500px;\n}\n#trail-at[data-v-61a7c374]{\n    position: absolute;\n    width: 350px;\n    height: 250px;\n     top: 565vh;\n     left: 1000px;\n}\n#footer-border[data-v-61a7c374]{\n    background: #2b2d2f;\n    width:100%;\n    height: 150px;\n    color: white;\n}\n\n", ""]);
+exports.push([module.i, "\n*[data-v-61a7c374]{\n    margin: 0;\n    padding: 0;\n}\n#footer-img[data-v-61a7c374]{\n    position: absolute;\n    top: 630vh;\n    width: 100%;\n    height: 1000px;\n}\n#association-text[data-v-61a7c374]{\n     position: relative;\n  background: white;\n  text-align: center;\n  font-size: 50px;\n  bottom: 50vh;\n  opacity: 0.5;\n}\n#association-bg[data-v-61a7c374]{\n    position: relative;\n    background: #2b2d2f;\n    height: 500px;\n    bottom: 90vh;\n}\n#association-bg2[data-v-61a7c374]{\n    position: relative;\n    background: #50c878;\n    height: 350px;\n    bottom: 100vh;\n    -webkit-transform-origin: bottom left;\n            transform-origin: bottom left;\n   -webkit-transform: skewY(3deg);\n           transform: skewY(3deg);\n}\n#top-divider[data-v-61a7c374]{\n    position: relative;\n    background: #50c878;\n    height: 150px;\n    bottom: 200vh;\n}\n#hikers[data-v-61a7c374]{\n    position: absolute;\n    top: 440vh;\n    height: 1000px;\n}\n#trail-pct[data-v-61a7c374]{\n    position: absolute;\n    width: 350px;\n    height: 250px;\n     top: 565vh;\n     left: 50px;\n}\n#trail-cdt[data-v-61a7c374]{\n    position: absolute;\n    width: 350px;\n    height: 250px;\n     top: 565vh;\n     left: 500px;\n}\n#trail-at[data-v-61a7c374]{\n    position: absolute;\n    width: 350px;\n    height: 250px;\n     top: 565vh;\n     left: 1000px;\n}\n#footer-border[data-v-61a7c374]{\n    background: #2b2d2f;\n    width:100%;\n    height: 150px;\n    color: white;\n    font-size: 30px;\n}\n\n", ""]);
 
 // exports
 
@@ -38395,8 +38399,15 @@ var staticRenderFns = [
         }
       }),
       _vm._v(" "),
-      _c("p", { attrs: { id: "footer-border" } }, [
-        _vm._v("this is the footer")
+      _c("div", { staticClass: "row" }, [
+        _c(
+          "p",
+          {
+            staticClass: "col s12 m12 l12 center-align",
+            attrs: { id: "footer-border" }
+          },
+          [_vm._v("The TREK Ⓒ 2020")]
+        )
       ])
     ])
   }

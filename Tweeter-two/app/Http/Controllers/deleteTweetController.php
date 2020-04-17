@@ -12,7 +12,7 @@ class deleteTweetController extends Controller
         $tweet = \App\Tweet::find($id);
         $tweet -> delete();
 
-        return redirect('/');
+        return redirect('/home');
 
         }
     }

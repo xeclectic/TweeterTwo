@@ -9,3 +9,4 @@ import Vuex from 'vuex';
 const app = new Vue({
     el: '#app',
 });
+

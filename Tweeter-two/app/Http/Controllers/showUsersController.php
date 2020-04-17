@@ -13,7 +13,7 @@ class showUsersController extends Controller
 
             return View('listUsers', ['users' => $users, 'follows' => $follows]);
         }else{
-            return redirect('/');
+            return redirect('/home');
         }
     }
 

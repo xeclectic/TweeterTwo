@@ -9,6 +9,8 @@
         alt="backpacking"
       />
     </Parallax>
+
+    
     <div id="first-row" class="row">
       <p
         data-aos="fade-down"

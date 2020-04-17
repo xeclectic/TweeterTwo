@@ -15,7 +15,7 @@ class likeController extends Controller
 
             $like->save();
 
-            return redirect('/');
+            return redirect('/home');
         }
     }
 }

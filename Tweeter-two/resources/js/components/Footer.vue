@@ -14,14 +14,16 @@
           data-aos-duration="800" alt="Appalachian-Trail" id="trail-at" src="https://hikershostel.org/images/featured/a-trail-featured.jpg">
         <div id="association-bg2"></div>
         <img id="footer-img" alt="Horse-Packing" src="https://horsej-intellectsolutio.netdna-ssl.com/cdn/farfuture/78gD1r6uwKT0OgKI1V4MN1pHbaFp8PLIuU5gRUAR4ac/mtime:1543626992/files/2018/trest-img_8137_0.jpg">
-        <p id="footer-border">this is the footer</p>
+        <div class="row">
+            <p class="col s12 m12 l12 center-align" id="footer-border">The TREK Ⓒ 2020</p>
+        </div>
     </div>
 </template>
 
 <script>
 
 export default {
-    
+
 }
 </script>
 
@@ -82,7 +84,7 @@ export default {
     height: 250px;
      top: 565vh;
      left: 50px;
-    
+
 }
 
 #trail-cdt{
@@ -106,6 +108,7 @@ export default {
     width:100%;
     height: 150px;
     color: white;
+    font-size: 30px;
 }
 
 </style>

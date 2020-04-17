@@ -26,7 +26,7 @@ class editProfileController extends Controller
 
             $profile->save();
 
-            return redirect('/');
+            return redirect('/home');
         }
     }
 }

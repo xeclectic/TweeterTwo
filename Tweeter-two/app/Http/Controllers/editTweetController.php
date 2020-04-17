@@ -21,7 +21,7 @@ class editTweetController extends Controller{
 
             $tweet->save();
 
-            return redirect('/');
+            return redirect('/home');
         }
     }
 }

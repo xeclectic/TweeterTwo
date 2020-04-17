@@ -16,7 +16,7 @@ class createTweetController extends Controller
 
             $tweet->save();
 
-            return redirect('/');
+            return redirect('/home');
         }
     }
 }
