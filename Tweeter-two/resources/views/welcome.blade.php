@@ -6,6 +6,7 @@
         <title>The Trek</title>
             {{-- Linked Libraries/Frameworks--}}
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <body>
         <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
@@ -26,12 +27,15 @@
             </div>
         </div>
         </div>
-
     <script src="{{ asset('js/app.js') }}"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+      </script>
 
         {{-- Library Script --}}
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
         {{-- scrollMagic --}}
-        <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
         {{-- Materialize --}}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
